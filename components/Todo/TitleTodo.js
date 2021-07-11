@@ -13,16 +13,16 @@ const TitleTodo = (props) => {
       {currentTheme == 0 ? (
         <div style={{ cursor: "pointer" }}>
           <Image onClick={() => {
-            changeTheme();
             setIndex((index + 1) % 2);
+            changeTheme();
           }} src={sun} alt="" />
         </div>
 
       ) : (
         <div style={{ cursor: "pointer" }}>
           <Image onClick={() => {
-            changeTheme();
             setIndex((index + 1) % 2);
+            changeTheme();
           }} src={moon} alt="" />
         </div>
 
