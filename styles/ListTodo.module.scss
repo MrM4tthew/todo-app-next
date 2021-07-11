@@ -19,6 +19,18 @@
       display: flex;
       width: 32%;
       justify-content: space-between;
+      color: var(--color-text);
+      .menutext {
+        cursor: pointer;
+        transition: 250ms;
+      }
+      .menutext:hover {
+        color: blue;
+        transition: 250ms;
+      }
+      .menutext.active {
+        color: blue;
+      }
     }
   }
 }

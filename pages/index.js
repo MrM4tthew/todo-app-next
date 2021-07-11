@@ -31,11 +31,11 @@ function changeTheme() {
 }
 
 export default function Home() {
-  const [index, setIndex] = useState(currentIndex);
+  const [index, setIndex] = useState();
 
-  // useEffect(() => {
-
-  // })
+  useEffect(() => {
+    setIndex(currentIndex)
+  }, [])
 
   return (
     <div className={styles.container}>

@@ -40,9 +40,9 @@ const TodoCard = ({ todo, doneHandler, deleteHandler }) => {
             deleteHandler(data.id);
           }, 1000);
           setRemove(true);
-          //   setTimeout(() => {
-          //     setRemove(false);
-          //   }, 1000);
+          setTimeout(() => {
+            setRemove(false);
+          }, 1000);
         }}
       >
         <Image src={deleteLogo} />
