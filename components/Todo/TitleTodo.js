@@ -5,7 +5,7 @@ import sun from "../../public/images/icon-sun.svg"
 import moon from "../../public/images/icon-moon.svg"
 
 const TitleTodo = (props) => {
-  const { currentTheme, changeTheme, setIndex, index } = props;
+  const { currentTheme, changeTheme } = props;
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontWeight: "700" }}>
@@ -13,7 +13,6 @@ const TitleTodo = (props) => {
       {currentTheme == 0 ? (
         <div style={{ cursor: "pointer" }}>
           <Image onClick={() => {
-            setIndex((index + 1) % 2);
             changeTheme();
           }} src={sun} alt="" />
         </div>
@@ -21,7 +20,6 @@ const TitleTodo = (props) => {
       ) : (
         <div style={{ cursor: "pointer" }}>
           <Image onClick={() => {
-            setIndex((index + 1) % 2);
             changeTheme();
           }} src={moon} alt="" />
         </div>

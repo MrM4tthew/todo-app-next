@@ -21,21 +21,32 @@ if (process.browser) {
   // var currentTheme = themes[currentIndex];
 }
 
-function changeTheme() {
-  themeIndex++;
-  body.className = '';
-  body.classList.add(themes[themeIndex % themes.length]);
-  if (process.browser) {
-    localStorage.setItem("themeIndex", themeIndex);
-  }
-}
+// function changeTheme() {
+//   themeIndex++;
+//   body.className = '';
+//   body.classList.add(themes[themeIndex % themes.length]);
+//   if (process.browser) {
+//     localStorage.setItem("themeIndex", themeIndex);
+//   }
+// }
 
 export default function Home() {
   const [index, setIndex] = useState();
 
   useEffect(() => {
+
     setIndex(currentIndex)
   }, [])
+
+  function changeTheme() {
+    setIndex((index + 1) % 2)
+    themeIndex++;
+    body.className = '';
+    body.classList.add(themes[themeIndex % themes.length]);
+    if (process.browser) {
+      localStorage.setItem("themeIndex", themeIndex);
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -49,8 +60,6 @@ export default function Home() {
       <Todo
         currentTheme={index}
         changeTheme={changeTheme}
-        setIndex={setIndex}
-        index={index}
       />
       {/* <button
         style={{ top: "0", position: "absolute", zIndex: "99" }}
