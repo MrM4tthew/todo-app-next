@@ -12,16 +12,22 @@ const TitleTodo = (props) => {
       <span style={{ color: "white", fontSize: "2.5rem", letterSpacing: "15px", lineHeight: "2rem" }}>TODO</span>
       {currentTheme == 0 ? (
         <div style={{ cursor: "pointer" }}>
-          <Image onClick={() => {
+          {/* <Image onClick={() => {
             changeTheme();
-          }} src={sun} alt="" />
+          }} src={sun} alt="" /> */}
+          <span onClick={() => {
+            changeTheme();
+          }}>light</span>
         </div>
 
       ) : (
         <div style={{ cursor: "pointer" }}>
-          <Image onClick={() => {
+          {/* <Image onClick={() => {
             changeTheme();
-          }} src={moon} alt="" />
+          }} src={moon} alt="" /> */}
+          <span onClick={() => {
+            changeTheme();
+          }}>night</span>
         </div>
 
       )}
