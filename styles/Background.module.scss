@@ -1,0 +1,29 @@
+@import "variables";
+
+.backgroundcontainer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  .desktop {
+    display: block;
+    // transition: 800ms;
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+  .mobile {
+    display: none !important;
+    @media screen and (max-width: $mobile) {
+      display: block;
+    }
+  }
+
+  &.dark,
+  &.light {
+    background-color: var(--color-bg);
+    transition: 300ms;
+  }
+}
